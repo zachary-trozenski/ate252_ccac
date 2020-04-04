@@ -12,10 +12,14 @@ vehicle.
 * Determining outcome variables vs. independent variables
 
 > (Dependent variable/explanitory on Y-axis)
+>
 > (Independent variable on X-axis)
+>
 > E.g.
+>
 > X = age of driver
 > 	- consider increments
+>
 > Y = liklihood of fatal crash [0-1 scale]
 
 * In the crash data there is a flag for fatality count.
