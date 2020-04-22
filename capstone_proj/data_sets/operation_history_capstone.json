@@ -1,0 +1,2386 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "Workers Present",
+    "description": "Remove column Workers Present"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Work Zone Close/Detour",
+    "description": "Remove column Work Zone Close/Detour"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Work Zone Law Officer",
+    "description": "Remove column Work Zone Law Officer"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Work Zone Flagger",
+    "description": "Remove column Work Zone Flagger"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Work Zone Closure",
+    "description": "Remove column Work Zone Closure"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Work Zone Other",
+    "description": "Remove column Work Zone Other"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Work Zone Shoulder/Median",
+    "description": "Remove column Work Zone Shoulder/Median"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Work Zone Moving",
+    "description": "Remove column Work Zone Moving"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Work Zone Type",
+    "description": "Remove column Work Zone Type"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Work Zone Location",
+    "description": "Remove column Work Zone Location"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Construction Zone Speed Limit",
+    "description": "Remove column Construction Zone Speed Limit"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Interstate",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Interstate"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Interstate",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Interstate"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Interstate",
+    "expression": "grel:value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Interstate using expression grel:value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State Road",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column State Road"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State Road",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column State Road"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State Road",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column State Road using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Local Road Only",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Local Road Only"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Local Road Only",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Local Road Only"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Local Road Only",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Local Road Only using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Turnpike",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Turnpike"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Turnpike",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Turnpike"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Turnpike",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Turnpike using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Injury",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Injury"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Injury",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Injury"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Injury",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Injury using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Alcohol Related",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Alcohol Related"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Alcohol Related",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Alcohol Related"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Alcohol Related",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Alcohol Related using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Drinking Driver",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Drinking Driver"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Drinking Driver",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Drinking Driver"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Drinking Driver",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Drinking Driver using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Underage Drinking Driver",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Underage Drinking Driver"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Underage Drinking Driver",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Underage Drinking Driver"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Underage Drinking Driver",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Underage Drinking Driver using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Unlicensed",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Unlicensed"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Unlicensed",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Unlicensed"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Unlicensed",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Unlicensed using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Distracted",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Distracted"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Distracted",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Distracted"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Distracted",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Distracted using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cell Phone",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Cell Phone"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cell Phone",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Cell Phone"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Cell Phone",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Cell Phone using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "No Clearance",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column No Clearance"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "No Clearance",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column No Clearance"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "No Clearance",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column No Clearance using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Running Red Light",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Running Red Light"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Running Red Light",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Running Red Light"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Running Red Light",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Running Red Light using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Tailgating",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Tailgating"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Tailgating",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Tailgating"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Tailgating",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Tailgating using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Speeding",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Speeding"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Speeding",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Speeding"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Speeding",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Speeding using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Speeding Related",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Speeding Related"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Speeding Related",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Speeding Related"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Speeding Related",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Speeding Related using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Aggressive Driving",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Aggressive Driving"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Aggressive Driving",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Aggressive Driving"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Aggressive Driving",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Aggressive Driving using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Fatigue / Asleep",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Fatigue / Asleep"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Fatigue / Asleep",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Fatigue / Asleep"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Fatigue / Asleep",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Fatigue / Asleep using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Unbelted",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Unbelted"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Unbelted",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Unbelted using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Running Stop Sign",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Running Stop Sign"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Running Stop Sign",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Running Stop Sign"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Running Stop Sign",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Running Stop Sign using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Hit Parked Vehicle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Hit Parked Vehicle"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Hit Parked Vehicle",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Hit Parked Vehicle"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Hit Parked Vehicle",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Hit Parked Vehicle using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Suspected Serious Injury",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Suspected Serious Injury"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Suspected Serious Injury",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Suspected Serious Injury"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Suspected Serious Injury",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Suspected Serious Injury using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Suspected Minor Injury",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Suspected Minor Injury"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Suspected Minor Injury",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Suspected Minor Injury"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Suspected Minor Injury",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Suspected Minor Injury using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Drug Related",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Drug Related"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Drug Related",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Drug Related"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Drug Related",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Drug Related using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Drugged Driver",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Drugged Driver"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Drugged Driver",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Drugged Driver"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Drugged Driver",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Drugged Driver using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Impaired Driver",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Impaired Driver"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Impaired Driver",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Impaired Driver"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Impaired Driver",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Impaired Driver using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Fatal",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Fatal"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Fatal",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Fatal"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Fatal",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Fatal using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Non Intersection",
+    "description": "Remove column Non Intersection"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Intersection",
+    "description": "Remove column Intersection"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Signalized Intersection",
+    "description": "Remove column Signalized Intersection"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Stop Controlled Intersection",
+    "description": "Remove column Stop Controlled Intersection"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Unsignalized Intersection",
+    "description": "Remove column Unsignalized Intersection"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "School Bus",
+    "description": "Remove column School Bus"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Cross Median",
+    "description": "Remove column Cross Median"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Curved Road",
+    "description": "Remove column Curved Road"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Limit 65 MPH",
+    "description": "Remove column Limit 65 MPH"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Curve Driver Error",
+    "description": "Remove column Curve Driver Error"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Train",
+    "description": "Remove column Train"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Trolley",
+    "description": "Remove column Trolley"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Fire In Vehicle",
+    "description": "Remove column Fire In Vehicle"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Vehicle Towed",
+    "description": "Remove column Vehicle Towed"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Hazardous Truck",
+    "description": "Remove column Hazardous Truck"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "School Bus Unit",
+    "description": "Remove column School Bus Unit"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Illegal Drug Related",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column Illegal Drug Related"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Illegal Drug Related",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column Illegal Drug Related"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Illegal Drug Related",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Illegal Drug Related using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Motorcycle Drinking Driver",
+    "description": "Remove column Motorcycle Drinking Driver"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Possible Injury",
+    "description": "Remove column Possible Injury"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Driver 16 Years Old",
+    "description": "Remove column Driver 16 Years Old"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Driver 18 Years Old",
+    "description": "Remove column Driver 18 Years Old"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Driver 19 Years Old",
+    "description": "Remove column Driver 19 Years Old"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Driver 17 Years Old",
+    "description": "Remove column Driver 17 Years Old"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Driver 20 Years Old",
+    "description": "Remove column Driver 20 Years Old"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Driver 50 - 64 Years Old",
+    "description": "Remove column Driver 50 - 64 Years Old"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Driver 65 - 74 Years Old",
+    "description": "Remove column Driver 65 - 74 Years Old"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Driver 75 Plus",
+    "description": "Remove column Driver 75 Plus"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Pedestrian",
+    "description": "Remove column Pedestrian"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Commercial Vehicle",
+    "description": "Remove column Commercial Vehicle"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "PSP Reported",
+    "description": "Remove column PSP Reported"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Illumination Dark",
+    "description": "Remove column Illumination Dark"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Deer Related",
+    "description": "Remove column Deer Related"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NHTSA Aggressive Driving",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "No"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0"
+      }
+    ],
+    "description": "Mass edit cells in column NHTSA Aggressive Driving"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NHTSA Aggressive Driving",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "1"
+      }
+    ],
+    "description": "Mass edit cells in column NHTSA Aggressive Driving"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NHTSA Aggressive Driving",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NHTSA Aggressive Driving using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "School Zone Indicator",
+    "description": "Remove column School Zone Indicator"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "School Bus Indicator",
+    "description": "Remove column School Bus Indicator"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Arrival Time",
+    "description": "Remove column Arrival Time"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Dispatch Time",
+    "description": "Remove column Dispatch Time"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Lane Closed",
+    "description": "Remove column Lane Closed"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Estimated Hours Closed",
+    "description": "Remove column Estimated Hours Closed"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Lane Closure Direction",
+    "description": "Remove column Lane Closure Direction"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Notify Highway Maintenance",
+    "description": "Remove column Notify Highway Maintenance"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Special Jurisdiction",
+    "description": "Remove column Special Jurisdiction"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Traffic Detour",
+    "description": "Remove column Traffic Detour"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Traffic Control Device Function",
+    "description": "Remove column Traffic Control Device Function"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Suspected Serious Injury Count",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Suspected Serious Injury Count using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Suspected Minor Injury Count",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Suspected Minor Injury Count using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Possible Injury Count",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Possible Injury Count using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Total Injury Count",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Total Injury Count using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Roadway Surface Type",
+    "description": "Remove column Roadway Surface Type"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Property Damage Only",
+    "description": "Remove column Property Damage Only"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Injury or Fatal",
+    "description": "Remove column Injury or Fatal"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Fatal or Suspected Serious Injury",
+    "description": "Remove column Fatal or Suspected Serious Injury"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Hit Deer",
+    "description": "Remove column Hit Deer"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "School Zone",
+    "description": "Remove column School Zone"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Hit Tree / Shrub",
+    "description": "Remove column Hit Tree / Shrub"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Phantom Vehicle",
+    "description": "Remove column Phantom Vehicle"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Train / Trolley",
+    "description": "Remove column Train / Trolley"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Vehicle Failure",
+    "description": "Remove column Vehicle Failure"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Heavy Truck Related",
+    "description": "Remove column Heavy Truck Related"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Bicycle",
+    "description": "Remove column Bicycle"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Motorcycle",
+    "description": "Remove column Motorcycle"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Hit Embankment",
+    "description": "Remove column Hit Embankment"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Hit Pole",
+    "description": "Remove column Hit Pole"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Hit Guide Rail",
+    "description": "Remove column Hit Guide Rail"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Hit Guide Rail End",
+    "description": "Remove column Hit Guide Rail End"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Hit Barrier",
+    "description": "Remove column Hit Barrier"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Overturned",
+    "description": "Remove column Overturned"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Hit Bridge",
+    "description": "Remove column Hit Bridge"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Location Type",
+    "description": "Remove column Location Type"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Fatality Count",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Fatality Count using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Injury Count",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Injury Count using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Person Count",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Person Count using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Total Unit Count",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Total Unit Count using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Vehicle Count",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Vehicle Count using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Bicycle Death Count",
+    "description": "Remove column Bicycle Death Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Motorcycle Suspected Serious Injury Count",
+    "description": "Remove column Motorcycle Suspected Serious Injury Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Pedestrian Count",
+    "description": "Remove column Pedestrian Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Pedestrian Death Count",
+    "description": "Remove column Pedestrian Death Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Pedestrian Suspected Serious Injury Count",
+    "description": "Remove column Pedestrian Suspected Serious Injury Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Maximum Severity Level",
+    "description": "Remove column Maximum Severity Level"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Commercial Vehicle Count",
+    "description": "Remove column Commercial Vehicle Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Sudden Deer",
+    "description": "Remove column Sudden Deer"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Work Zone",
+    "description": "Remove column Work Zone"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Single Vehicle Run Off Road",
+    "description": "Remove column Single Vehicle Run Off Road"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Hit Fixed Object",
+    "description": "Remove column Hit Fixed Object"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Head On / Opposite Direction Side Swipe",
+    "description": "Remove column Head On / Opposite Direction Side Swipe"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Rear End",
+    "description": "Remove column Rear End"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Shoulder Related",
+    "description": "Remove column Shoulder Related"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Wet Road",
+    "description": "Remove column Wet Road"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Snow Slush Road",
+    "description": "Remove column Snow Slush Road"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Icy Road",
+    "description": "Remove column Icy Road"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Bicycle Suspected Serious Injury Count",
+    "description": "Remove column Bicycle Suspected Serious Injury Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Motorcycle Death Count",
+    "description": "Remove column Motorcycle Death Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Van Count",
+    "description": "Remove column Van Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Bicycle Count",
+    "description": "Remove column Bicycle Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "SUV Count",
+    "description": "Remove column SUV Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Heavy Truck Count",
+    "description": "Remove column Heavy Truck Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Bus Count",
+    "description": "Remove column Bus Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Small Truck Count",
+    "description": "Remove column Small Truck Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Motorcycle Count",
+    "description": "Remove column Motorcycle Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Automobile Count",
+    "description": "Remove column Automobile Count"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Hour of Day",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Hour of Day using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Traffic Control Device",
+    "description": "Remove column Traffic Control Device"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Intersection Type",
+    "description": "Remove column Intersection Type"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Weather",
+    "description": "Remove column Weather"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Crash Year",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Crash Year using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Crash Month",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Crash Month using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Day of Week",
+    "description": "Remove column Day of Week"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Unknown Injury Degree Count",
+    "description": "Remove column Unknown Injury Degree Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Unknown Injury Person Count",
+    "description": "Remove column Unknown Injury Person Count"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "75 Plus Year Old Driver Count",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column 75 Plus Year Old Driver Count using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "65-74 Year Old Driver Count",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column 65-74 Year Old Driver Count using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "50-64 Year Old Driver Count",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column 50-64 Year Old Driver Count using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "20 Year Old Driver Count",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column 20 Year Old Driver Count using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "19 Year Old Driver Count",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column 19 Year Old Driver Count using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "18 Year Old Driver Count",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column 18 Year Old Driver Count using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "17 Year Old Driver Count",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column 17 Year Old Driver Count using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "16 Year Old Driver Count",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column 16 Year Old Driver Count using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Belted Suspected Serious Injury Count",
+    "description": "Remove column Belted Suspected Serious Injury Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Belted Death Count",
+    "description": "Remove column Belted Death Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Unbelted Suspected Serious Injury Count",
+    "description": "Remove column Unbelted Suspected Serious Injury Count"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Unbelted Death Count",
+    "description": "Remove column Unbelted Death Count"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Unbelted Occupant Count",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Unbelted Occupant Count using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Latitude",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Latitude using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Latitude (Decimal)",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Latitude (Decimal) using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Longitude (Decimal)",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Longitude (Decimal) using expression value.toNumber()"
+  }
+]
