@@ -7,6 +7,6 @@ Only the files with 500 rows were able to be loaded by OpenRefine. While this is
 
 #### Contents
 * `/normalized_data` contains both belted and unbelted datasets normalized and edited within OpenRefine
-* `sampled_data' contains both belted and unbelted datasets sampled from the larger files but unprocessed
+* `sampled_data` contains both belted and unbelted datasets sampled from the larger files but unprocessed
 * `openrefine_proj_files` contains the exported OpenRefine project files
 * `operation_history_captsone.json` is the json file that contains the history and operations done within OpenRefine
